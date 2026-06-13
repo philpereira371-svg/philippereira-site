@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Phil Pereira — builder of software products</title>
+<meta name="description" content="Phil Pereira — founder of Pharoah Technology. I build and ship software products: consumer apps and B2B tools, from a live kids' world to an AI tool suite for small businesses." />
+<meta name="theme-color" content="#0c0d11" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0d11'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23e8a44d' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Phil Pereira — builder of software products" />
+<meta property="og:description" content="Founder of Pharoah Technology. Consumer apps and B2B tools, shipped to real users." />
+<meta property="og:url" content="https://philippereira.com/" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#0c0d11; --bg-soft:#14151b; --line:#23242c;
+    --text:#f4f3ef; --muted:#9a9aa6; --accent:#e8a44d; --accent-ink:#1c1305;
+    --display:"Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --body:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--accent);color:var(--accent-ink)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(12,13,17,.72);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--max);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .wordmark{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em}
+  .wordmark b{color:var(--accent)}
+  .nav-links{display:flex;gap:22px;font-size:14px}
+  .nav-links a{color:var(--muted);transition:color .15s}
+  .nav-links a:hover{color:var(--text)}
+  @media(max-width:560px){.nav-links{display:none}}
+
+  .hero{padding:104px 0 72px}
+  .eyebrow{font-family:var(--display);font-size:13px;letter-spacing:.04em;color:var(--accent);margin-bottom:22px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,6.4vw,4.4rem);line-height:1.04;letter-spacing:-.025em;max-width:15ch}
+  .hero p{margin-top:22px;color:var(--muted);font-size:clamp(1.05rem,2.2vw,1.25rem);max-width:54ch}
+  .cta-row{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{font-family:var(--display);font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;transition:transform .12s,background .15s,border-color .15s;display:inline-flex;align-items:center;gap:8px}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-primary:hover{background:#f0b566}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--muted)}
+
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .sec-head{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;margin-bottom:8px}
+  .sec-sub{color:var(--muted);max-width:60ch;margin-bottom:34px}
+
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+  @media(max-width:720px){.feat{grid-template-columns:1fr}}
+  .card{display:block;background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:26px;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-3px)}
+  .card .tag{font-family:var(--display);font-size:12px;letter-spacing:.04em;color:var(--accent)}
+  .card h3{font-family:var(--display);font-weight:600;font-size:1.35rem;margin:10px 0 8px;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:.97rem}
+  .card .go{display:inline-block;margin-top:16px;font-size:14px;color:var(--text);border-bottom:1px solid var(--accent);padding-bottom:2px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  .mini{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:22px;transition:border-color .15s,transform .15s}
+  .mini:hover{border-color:var(--accent);transform:translateY(-3px)}
+  .mini h4{font-family:var(--display);font-weight:600;font-size:1.1rem;margin-bottom:6px}
+  .mini p{color:var(--muted);font-size:.92rem}
+  .mini .host{display:block;margin-top:12px;font-size:13px;color:var(--accent)}
+
+  .about p{font-size:clamp(1.05rem,2.2vw,1.2rem);max-width:60ch;color:var(--text)}
+  .about p + p{margin-top:18px;color:var(--muted)}
+
+  footer{border-top:1px solid var(--line);padding:52px 0 64px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .foot h3{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-.02em}
+  .foot a.email{color:var(--accent);font-family:var(--display);font-weight:600}
+  .foot .meta{color:var(--muted);font-size:13px;text-align:right}
+  .foot .meta a{color:var(--muted)}
+  .foot .meta a:hover{color:var(--text)}
+
+  .reveal{opacity:0;transform:translateY(18px)}
+  @media(prefers-reduced-motion:no-preference){
+    .reveal{transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1)}
+    .reveal.in{opacity:1;transform:none}
+  }
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <span class="wordmark">Phil Pereira<b>.</b></span>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="border-top:none">
+    <div class="wrap">
+      <p class="eyebrow reveal">Founder, Pharoah Technology</p>
+      <h1 class="reveal">I build software products, then ship them.</h1>
+      <p class="reveal">Consumer apps and B2B tools. From a kids' world that is live and selling today to an AI tool suite for small businesses.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-primary" href="mailto:phil@philippereira.com">Email me</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2 class="sec-head reveal">What I've built</h2>
+      <p class="sec-sub reveal">A working portfolio, not a slide deck. These are real products with real users or weeks from launch.</p>
+
+      <div class="feat">
+        <a class="card reveal" href="https://pharoahkidsworld.uk" rel="noopener">
+          <span class="tag">Live and selling</span>
+          <h3>Pharaoh Kids World</h3>
+          <p>A safe, ad-free 3D world for kids: build, play, collect coins and make friends, with full parent controls. Live, with paid memberships.</p>
+          <span class="go">pharoahkidsworld.uk</span>
+        </a>
+        <a class="card reveal" href="https://pharoahtechnology.co.uk" rel="noopener">
+          <span class="tag">The company</span>
+          <h3>Pharoah Technology</h3>
+          <p>The studio behind it all, built 50/50 with Craig Attoh. Consumer apps on one side, a B2B AI tool suite on the other.</p>
+          <span class="go">pharoahtechnology.co.uk</span>
+        </a>
+      </div>
+
+      <div class="grid">
+        <a class="mini reveal" href="https://forge.pharoahtechnology.co.uk" rel="noopener">
+          <h4>The Forge suite</h4>
+          <p>Six AI tools that do one useful job each for freelancers and small businesses, from invoice-recovery letters to CV building.</p>
+          <span class="host">forge.pharoahtechnology.co.uk</span>
+        </a>
+        <a class="mini reveal" href="https://numerovia.online" rel="noopener">
+          <h4>Numerovia</h4>
+          <p>An AI numerology guide that turns a date and a name into a readable, personal report.</p>
+          <span class="host">numerovia.online</span>
+        </a>
+        <a class="mini reveal" href="https://costashop.com" rel="noopener">
+          <h4>CostaShop</h4>
+          <p>A shop and services marketplace for the Costa del Sol. Built and weeks from launch.</p>
+          <span class="host">costashop.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="about">
+    <div class="wrap">
+      <h2 class="sec-head reveal">How I work</h2>
+      <p class="reveal">I am a builder first. I take an idea to a working, paid product fast, then improve it with real feedback rather than guesses.</p>
+      <p class="reveal">I work across the whole stack and partner with people who are stronger than me where it counts. The aim is simple: ship things people actually use, and keep them honest about what they do.</p>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <div>
+      <h3 class="reveal">Let's build something.</h3>
+      <p class="reveal" style="margin-top:10px"><a class="email" href="mailto:phil@philippereira.com">phil@philippereira.com</a></p>
+    </div>
+    <div class="meta reveal">
+      <a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a><br>
+      Phil Pereira · Pharoah Technology Ltd<br>
+      Companies House 17220127
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold:.18 });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>
